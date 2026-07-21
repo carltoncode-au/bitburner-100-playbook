@@ -32,21 +32,20 @@
 | Item | Value |
 |------|-------|
 | Current BitNode | BitNode-1 |
-| Current Run | Run 2 |
+| Current Run | Run 3 |
 | Current City | Sector-12 |
-| Money | $975.879m |
-| Home RAM | *(To be recorded)* |
+| Money | $47.470m |
+| Home RAM | 8.00 GB free |
 | Home Cores | *(To be recorded)* |
-| Hacking Level | 265 |
+| Hacking Level | 199 |
 | Karma | 0.000 |
-| Hacknet Nodes | 1 |
+| Hacknet Nodes | 0 |
 | Cloud Servers | 0 / 25 |
-| Current Factions | NiteSec, Sector-12, CyberSec |
-| Augmentations Installed | 3 |
-| Augmentations Purchased, Not Installed | 1 |
-| Time Since Last Augmentation | 1d 1h 55m 08s |
-| Total Play Time | 1d 8h 35m 45s |
-| Current Focus | Building NiteSec reputation for the next augmentation cycle |
+| Current Factions | Sector-12 |
+| Augmentations Installed | 10 |
+| Time Since Last Augmentation | 2h 58m 51s |
+| Total Play Time | 9d 7h 35m 05s |
+| Current Focus | Rebuilding Run 3 with faster hacking growth and deploy.js V2 |
 
 ---
 
@@ -54,22 +53,24 @@
 
 ## Immediate
 
-- [x] Finish creating ServerProfiler.exe.
-- [x] Reach Hacking Level 250.
-- [x] Create or acquire relaySMTP.exe.
-- [x] Join NiteSec.
-- [x] Purchase Cranial Signal Processors - Gen I.
-- [ ] Continue building NiteSec reputation.
-- [ ] Review the remaining NiteSec augmentations.
-- [ ] Keep purchased augmentations uninstalled until the next cycle is ready.
+- [x] Install the second augmentation batch.
+- [x] Begin Run 3.
+- [x] Create deploy.js V2.
+- [x] Restore distributed hacking automation.
+- [ ] Rejoin CyberSec.
+- [ ] Rejoin NiteSec.
+- [ ] Continue rebuilding hacking levels and income.
+- [ ] Finish recreating ServerProfiler.exe.
 
 ## Short Term
 
-- [ ] Continue expanding the rooted server network.
+- [ ] Reacquire relaySMTP.exe.
+- [ ] Reacquire HTTPWorm.exe.
+- [ ] Reacquire SQLInject.exe.
+- [ ] Rejoin The Black Hand when eligible.
+- [ ] Expand automation beyond the current 12 active hosts.
 - [ ] Upgrade Home RAM.
-- [ ] Purchase or create additional port-opening programs.
-- [ ] Select the remaining augmentations for Run 2.
-- [ ] Prepare the second augmentation installation.
+- [ ] Begin the next faction-reputation cycle.
 
 ## Long Term
 
@@ -81,7 +82,7 @@
 
 # Achievement Tracker
 
-## Completed (9 / 98)
+## Completed (13 / 98)
 
 | Achievement | Date |
 |------------|------|
@@ -94,10 +95,14 @@
 | ✅ I never asked for this. (Install first augmentation) | 2026-07-12 |
 | ✅ relaySMTP.exe (Acquire relaySMTP.exe) | 2026-07-13 |
 | ✅ avmnite-02h (Join NiteSec) | 2026-07-13 |
+| ✅ HTTPWorm.exe (Acquire HTTPWorm.exe) | 2026-07-14 |
+| ✅ SQLInject.exe (Acquire SQLInject.exe) | 2026-07-14 |
+| ✅ The original hacker (Make $10m from Hacknet Nodes) | 2026-07-20 |
+| ✅ Donate! (Unlock faction donations) | 2026-07-21 |
 
 ## Remaining
 
-**89 Steam achievements remaining**
+**85 Steam achievements remaining**
 
 ---
 
@@ -109,30 +114,25 @@
 
 - Built the first distributed automation network.
 - Purchased the TOR Router.
-- Acquired BruteSSH.exe.
-- Acquired FTPcrack.exe.
-- Acquired relaySMTP.exe.
-- Acquired DeepscanV1.exe.
-- Acquired AutoLink.exe.
-- Acquired ServerProfiler.exe.
-- Joined Sector-12.
-- Joined CyberSec.
-- Joined NiteSec.
-- Installed the first three augmentations.
-- Rebuilt and substantially expanded the hacking network after the first augmentation installation.
+- Acquired the first five port-opening programs during Run 2.
+- Joined Sector-12, CyberSec, and NiteSec.
+- Installed the first augmentation batch.
+- Rebuilt and expanded the hacking network after the first installation.
+- Completed a second, much larger augmentation cycle.
+- Began Run 3 with substantially stronger hacking multipliers.
 
 ### Current Strategy
 
-Run 2 has moved beyond the initial rebuild. Hacking level has reached 265, available money is approaching $1 billion, and distributed automation is active across more than twenty rooted hosts. The current priority is NiteSec reputation and assembling a worthwhile group of augmentations before performing the second installation.
+Run 3 is a rapid rebuild cycle. The second augmentation batch increased hacking money, hacking level, hacking experience, and hacking speed enough that hacking skill is climbing far faster than in earlier runs. The immediate goal is to use `deploy.js V2` to restore the network quickly, rejoin the hacking factions, and return to the strongest available progression path without spending long on low-value early-game work.
 
 ### Current Priorities
 
-1. Continue NiteSec hacking contracts.
-2. Review the nine NiteSec augmentations still available.
-3. Keep Cranial Signal Processors - Gen I purchased but uninstalled.
-4. Continue distributed hacking automation while faction work progresses.
-5. Acquire additional port-opening tools as they become available.
-6. Install the next group of augmentations together rather than resetting for a single upgrade.
+1. Keep distributed hacking active while rebuilding.
+2. Rejoin CyberSec and NiteSec as soon as their servers are available.
+3. Finish rebuilding the essential program set.
+4. Use the improved augmentation multipliers to accelerate faction access.
+5. Avoid unnecessary Hacknet spending unless it supports an achievement or clear income goal.
+6. Prepare the next augmentation batch only after meaningful faction progress.
 
 ---
 
@@ -155,16 +155,20 @@ _TBD_
 | Script | Purpose | Status |
 |---------|---------|--------|
 | worker.js | Distributed hack / grow / weaken automation | ✅ Active |
-| deploy.js | Deploys worker.js across rooted servers | ✅ Available |
+| deploy.js V2 | Scans, roots, deploys, and starts workers more efficiently | ✅ Active |
 | scan.js | Network discovery | ✅ Available |
 | n00dles.js | Early-game hacking helper | ✅ Available |
 | hack.js | Dedicated hacking action | ✅ Available |
 | grow.js | Dedicated growth action | ✅ Available |
 | weaken.js | Dedicated security reduction action | ✅ Available |
 
+## deploy.js V2
+
+The revised deployment script replaces the earlier manual deployment workflow. Its purpose is to make post-augmentation recovery faster by discovering eligible servers, gaining root access where possible, copying the worker script, and using available RAM automatically.
+
 ## Current Deployment
 
-Automation is active across the following rooted hosts:
+Automation is currently active on 12 hosts:
 
 - n00dles
 - foodnstuff
@@ -174,45 +178,49 @@ Automation is active across the following rooted hosts:
 - harakiri-sushi
 - iron-gym
 - CSEC
-- zer0
-- nectar-net
 - max-hardware
-- silver-helix
-- phantasy
+- nectar-net
+- zer0
 - neo-net
-- omega-net
-- the-hub
-- avmnite-02h
-- netlink
-- summit-uni
-- I.I.I.I
-- rothman-uni
-- catalyst
 
 ---
 
 # Programs
 
-## Acquired
+Programs reset after augmentation installation and must be recreated or reacquired.
+
+## Currently Acquired
 
 | Program | Status | Purpose |
 |---------|--------|---------|
 | NUKE.exe | ✅ Acquired | Gains root access when enough ports are open |
 | BruteSSH.exe | ✅ Acquired | Opens SSH ports |
 | FTPcrack.exe | ✅ Acquired | Opens FTP ports |
-| relaySMTP.exe | ✅ Acquired | Opens SMTP ports |
 | DeepscanV1.exe | ✅ Acquired | Extends scan-analyze depth to 5 |
 | AutoLink.exe | ✅ Acquired | Enables direct connection through scan-analyze |
-| ServerProfiler.exe | ✅ Acquired | Displays hacking and Netscript information about servers |
 
-## Locked or Not Yet Acquired
+## In Progress
+
+| Program | Progress | Notes |
+|---------|----------|-------|
+| ServerProfiler.exe | 25.32% | Being recreated during Run 3 |
+
+## Not Yet Reacquired This Run
 
 | Program | Hacking Level Required |
 |---------|------------------------|
+| relaySMTP.exe | 250 |
 | DeepscanV2.exe | 400 |
 | HTTPWorm.exe | 500 |
 | SQLInject.exe | 750 |
 | Formulas.exe | 1000 |
+
+## Previously Acquired
+
+- relaySMTP.exe
+- HTTPWorm.exe
+- SQLInject.exe
+- ServerProfiler.exe
 
 ---
 
@@ -232,26 +240,17 @@ None.
 - harakiri-sushi
 - iron-gym
 - CSEC
-- zer0
-- nectar-net
 - max-hardware
-- silver-helix
-- phantasy
+- nectar-net
+- zer0
 - neo-net
-- omega-net
-- the-hub
-- avmnite-02h
-- netlink
-- summit-uni
-- I.I.I.I
-- rothman-uni
-- catalyst
 
 ## Home Upgrades
 
 | Upgrade | Status |
 |----------|--------|
-| RAM | *(To be recorded)* |
+| Free RAM | 8.00 GB |
+| Total RAM | *(To be recorded)* |
 | CPU Cores | *(To be recorded)* |
 
 ---
@@ -260,25 +259,29 @@ None.
 
 ## Current Membership
 
-- NiteSec
 - Sector-12
-- CyberSec
 
 ## Current Faction Progress
 
 | Faction | Reputation | Favor | Augmentations Remaining | Notes |
 |---------|------------|-------|-------------------------|-------|
-| NiteSec | 620.615 | 0.000 | 9 | Current focus; building reputation through hacking contracts |
-| Sector-12 | 19.716k | 0.773 | 7 | City faction retained from Run 1 |
-| CyberSec | 15.000k | 7.267 | 2 | First hacking faction; substantial favor retained |
+| Sector-12 | 308.688 | 54.322 | 5 | Current membership after the Run 3 reset |
+
+## Rumours and Rejoin Targets
+
+| Faction | Status | Notes |
+|---------|--------|-------|
+| CyberSec | Rumour available | Rejoin by demonstrating hacking skill on CSEC |
+| NiteSec | Rumour available | Rejoin after meeting its hacking-server requirements |
+| The Black Hand | Rumour available | `I.I.I.I` clue displayed |
 
 ## Faction History
 
 | Faction | Status | Notes |
 |---------|--------|-------|
-| Sector-12 | Joined | First city faction |
-| CyberSec | Joined | First hacking faction |
-| NiteSec | Joined | Second hacking faction; unlocked during Run 2 |
+| Sector-12 | Rejoined / Current | First city faction |
+| CyberSec | Previously joined | Must be rejoined after augmentation installation |
+| NiteSec | Previously joined | Must be rejoined after augmentation installation |
 
 ---
 
@@ -286,30 +289,45 @@ None.
 
 ## Installed
 
-| Augmentation | Status |
-|--------------|--------|
-| BitWire | ✅ Installed |
-| Synaptic Enhancement Implant | ✅ Installed |
-| Neurotrainer I | ✅ Installed |
+| Augmentation | Installation Cycle |
+|--------------|--------------------|
+| BitWire | Run 1 → Run 2 |
+| Synaptic Enhancement Implant | Run 1 → Run 2 |
+| Neurotrainer I | Run 1 → Run 2 |
+| Cranial Signal Processors - Gen I | Run 2 → Run 3 |
+| Cranial Signal Processors - Gen II | Run 2 → Run 3 |
+| Cranial Signal Processors - Gen III | Run 2 → Run 3 |
+| DataJack | Run 2 → Run 3 |
+| Neurotrainer II | Run 2 → Run 3 |
+| Wired Reflexes | Run 2 → Run 3 |
+| NeuroFlux Governor - Level 4 | Run 2 → Run 3 |
 
-## Purchased, Not Installed
-
-| Augmentation | Source | Status | Effect Shown |
-|--------------|--------|--------|--------------|
-| Cranial Signal Processors - Gen I | NiteSec | 🟡 Purchased | Hacking speed multiplier improves from 103% to 104.03% when installed |
-
-## Active Multipliers from Installed Augmentations
+## Current Multipliers
 
 | Multiplier | Current Value |
 |------------|---------------|
-| Hacking Level | 105% |
-| Hacking Speed | 103% |
-| Hacking Experience | 110% |
-| Strength Experience | 110% |
-| Defense Experience | 110% |
-| Dexterity Experience | 110% |
-| Agility Experience | 110% |
-| Charisma Experience | 110% |
+| Hacking Chance | 109.26% |
+| Hacking Speed | 112.63% |
+| Hacking Money | 149.59% |
+| Hacking Growth | 104.06% |
+| Hacking Level | 133.81% |
+| Hacking Experience | 131.64% |
+| Hacknet Production | 104.06% |
+| Hacknet Purchase Cost | 96.10% |
+| Hacknet RAM Upgrade Cost | 96.10% |
+| Hacknet Core Purchase Cost | 96.10% |
+| Hacknet Level Upgrade Cost | 96.10% |
+| Company Reputation Gain | 104.06% |
+| Faction Reputation Gain | 104.06% |
+| Salary | 104.06% |
+| Crime Success Chance | 104.06% |
+| Crime Money | 104.06% |
+| Strength Level | 104.06% |
+| Defense Level | 104.06% |
+| Dexterity Level | 109.26% |
+| Agility Level | 109.26% |
+| Charisma Level | 104.06% |
+| Physical and Charisma Experience | 131.64% |
 
 ---
 
@@ -319,13 +337,14 @@ Verified during this playthrough:
 
 - Distributed automation with `worker.js` scales effectively during the early game.
 - Purchasing the TOR Router early accelerates access to Dark Web tools.
-- Installing augmentations resets short-term progression such as money, hacking level, active scripts, Hacknet Nodes, and rooted-server access.
+- Installing augmentations resets short-term progression such as money, hacking level, active scripts, Hacknet Nodes, rooted-server access, programs, and faction membership.
 - Script files stored on `home` remain available after an augmentation installation and can be redeployed.
-- Installed augmentations, achievements, and faction memberships persist through augmentation installation.
-- Faction reputation resets after installing augmentations, while faction membership persists.
+- Installed augmentations and achievements persist through augmentation installation.
+- Faction favor persists, but faction membership and reputation must be rebuilt.
 - Purchased augmentations can be held without installing them immediately.
 - Waiting to install several augmentations together avoids unnecessary repeated resets.
-- The first post-augmentation rebuild progressed much faster than the original run.
+- Stronger augmentation batches dramatically accelerate later-run hacking growth.
+- A reusable deployment script is one of the most valuable tools for recovering after a reset.
 
 ---
 
@@ -339,8 +358,11 @@ Verified during this playthrough:
 | 2026-07-12 | Install the first three affordable augmentations together. | Permanent bonuses outweighed the temporary reset. |
 | 2026-07-13 | Restore the distributed network immediately after the first reset. | Reusable scripts allowed Run 2 to overtake Run 1 quickly. |
 | 2026-07-13 | Begin creating ServerProfiler.exe before relaySMTP.exe unlocks. | Made productive use of time while progressing toward Hacking Level 250. |
-| 2026-07-13 | Join NiteSec and begin hacking contracts. | Opens access to stronger hacking-focused augmentations. |
-| 2026-07-13 | Purchase Cranial Signal Processors - Gen I without installing it immediately. | Allows more augmentations to be accumulated before the next reset. |
+| 2026-07-13 | Join NiteSec and begin hacking contracts. | Opened access to stronger hacking-focused augmentations. |
+| 2026-07-13 | Purchase Cranial Signal Processors - Gen I without installing it immediately. | Allowed more augmentations to be accumulated before the next reset. |
+| 2026-07-20 | Continue the second augmentation cycle until a substantial batch was ready. | Maximized the value of the next reset. |
+| 2026-07-21 | Install the second augmentation batch and begin Run 3. | The combined hacking bonuses were large enough to justify resetting. |
+| 2026-07-21 | Replace the original deployment workflow with deploy.js V2. | Speeds up recovery and reduces repetitive manual deployment work. |
 
 ---
 
@@ -355,17 +377,25 @@ Verified during this playthrough:
 - Joined Sector-12 and CyberSec.
 - Installed BitWire, Synaptic Enhancement Implant, and Neurotrainer I.
 
-## Run 2 — Current
+## Run 2
 
-- Rebuilt distributed automation.
-- Reached Hacking Level 265.
-- Recovered to $975.879m.
-- Expanded active automation to 22 rooted hosts.
-- Completed ServerProfiler.exe.
-- Acquired relaySMTP.exe.
+- Rebuilt and expanded distributed automation.
+- Reached the higher hacking levels needed for relaySMTP.exe, HTTPWorm.exe, and SQLInject.exe.
 - Joined NiteSec.
-- Purchased Cranial Signal Processors - Gen I.
-- Began building NiteSec reputation for the second augmentation cycle.
+- Unlocked faction donations.
+- Earned $10m from Hacknet Nodes.
+- Purchased a large hacking-focused augmentation batch.
+- Ended with the second augmentation installation.
+
+## Run 3 — Current
+
+- Installed seven additional augmentations, bringing the total to 10.
+- Began with substantially improved hacking multipliers.
+- Created deploy.js V2.
+- Restored distributed automation across 12 hosts.
+- Reached Hacking Level 199 within the first three hours.
+- Rejoined Sector-12.
+- Began rebuilding programs and preparing to rejoin CyberSec and NiteSec.
 
 ---
 
@@ -392,13 +422,6 @@ Verified during this playthrough:
 - Built the first distributed deployment system.
 - Successfully deployed `worker.js` to rooted servers.
 
-### Current State
-
-- Money: $3.712m
-- Passive production since last augmentation: $4.610m
-- Production rate: approximately $607 per second
-- Automation stable
-
 ### Lessons Learned
 
 - A unified worker script dramatically simplifies management.
@@ -413,21 +436,8 @@ Verified during this playthrough:
 - Acquired FTPcrack.exe.
 - Joined Sector-12.
 - Joined CyberSec.
-- Purchased three augmentations.
-- Installed:
-  - BitWire
-  - Synaptic Enhancement Implant
-  - Neurotrainer I
-- Earned three new achievements.
+- Purchased and installed BitWire, Synaptic Enhancement Implant, and Neurotrainer I.
 - Began Run 2.
-
-### Current State
-
-- Hacking Level: 1
-- Money: $1.262k
-- Hacknet Nodes: 0
-- Automation reset
-- Rebuilding underway
 
 ### Lessons Learned
 
@@ -445,24 +455,11 @@ The first augmentation installation marked the transition from learning the game
 - Recovered to $42.585m.
 - Restored one Hacknet Node.
 - Acquired DeepscanV1.exe and AutoLink.exe.
-- Began creating ServerProfiler.exe and reached 69.15% completion.
-- Continued working with Sector-12, reaching 151.542 reputation and 0.773 favor.
-
-### Current State
-
-- Money: $42.585m
-- Hacking Level: 155
-- Hacknet Nodes: 1
-- Augmentations Installed: 3
-- Automation running across 12 hosts
-- Total production since last augmentation: $43.056m
-- Current production rate: approximately $784,488 per second
-- Time since last augmentation: 15h 14m 31s
-- Total play time: 21h 55m 08s
+- Began creating ServerProfiler.exe.
 
 ### Lessons Learned
 
-The first augmentation reset paid off quickly. Run 2 surpassed Run 1 in both hacking level and income, showing the combined value of permanent augmentation bonuses, retained scripts, and a repeatable deployment process.
+The first augmentation reset paid off quickly. Run 2 surpassed Run 1 in both hacking level and income, showing the value of permanent augmentation bonuses, retained scripts, and a repeatable deployment process.
 
 ---
 
@@ -475,33 +472,79 @@ The first augmentation reset paid off quickly. Run 2 surpassed Run 1 in both hac
 - Completed ServerProfiler.exe.
 - Acquired relaySMTP.exe.
 - Joined NiteSec.
-- Earned the `relaySMTP.exe` and `avmnite-02h` achievements.
-- Expanded distributed automation to 22 rooted hosts.
+- Expanded distributed automation.
 - Purchased Cranial Signal Processors - Gen I.
-- Began building NiteSec reputation through hacking contracts.
-- Deliberately left the newly purchased augmentation uninstalled.
-
-### Current State
-
-- Money: $975.879m
-- Hacking Level: 265
-- Hacknet Nodes: 1
-- Augmentations Installed: 3
-- Augmentations Purchased, Not Installed: 1
-- Active rooted hosts: 22
-- NiteSec reputation: 620.615
-- Sector-12 reputation: 19.716k
-- CyberSec reputation: 15.000k
-- Time since last augmentation: 1d 1h 55m 08s
-- Total play time: 1d 8h 35m 45s
-- Current focus: NiteSec hacking contracts
+- Began building NiteSec reputation.
 
 ### Lessons Learned
 
-- The reusable automation system continues to scale as additional servers become accessible.
 - Holding purchased augmentations until several are ready avoids resetting progress too often.
 - Hacking-faction progression provides a clear path toward stronger hacking multipliers.
-- Favor retained by earlier factions makes their future reputation progression more efficient.
+
+---
+
+## Session 5 – End of Run 2
+
+### Major Milestones
+
+- Continued NiteSec and faction progression.
+- Acquired HTTPWorm.exe and SQLInject.exe.
+- Earned the `The original hacker` achievement by making $10m from Hacknet Nodes.
+- Unlocked faction donations and earned the `Donate!` achievement.
+- Purchased the remaining planned augmentation batch:
+  - Cranial Signal Processors - Gen I
+  - Cranial Signal Processors - Gen II
+  - Cranial Signal Processors - Gen III
+  - DataJack
+  - Neurotrainer II
+  - Wired Reflexes
+  - NeuroFlux Governor - Level 4
+- Installed the full batch.
+- Ended Run 2.
+
+### Lessons Learned
+
+- Waiting for a substantial augmentation batch produced a much stronger next-run starting point.
+- Money that would be lost during installation is best spent on useful augmentations before resetting.
+- NeuroFlux Governor provided a final permanent gain when other faction purchases were exhausted.
+
+---
+
+## Session 6 – Start of Run 3
+
+### Major Milestones
+
+- Began Run 3 with 10 installed augmentations.
+- Created deploy.js V2.
+- Restored distributed automation across 12 hosts.
+- Reached Hacking Level 199 in under three hours.
+- Rejoined Sector-12.
+- Reacquired BruteSSH.exe, FTPcrack.exe, DeepscanV1.exe, and AutoLink.exe.
+- Began recreating ServerProfiler.exe.
+- Confirmed rumours for CyberSec, NiteSec, and The Black Hand.
+- Increased the Steam achievement total to 13 / 98.
+
+### Current State
+
+- Money: $47.470m
+- Hacking Level: 199
+- Hacknet Nodes: 0
+- Augmentations Installed: 10
+- Active rooted hosts: 12
+- Current faction: Sector-12
+- Sector-12 reputation: 308.688
+- Sector-12 favor: 54.322
+- ServerProfiler.exe progress: 25.32%
+- Time since last augmentation: 2h 58m 51s
+- Total play time: 9d 7h 35m 05s
+
+### Lessons Learned
+
+- The larger augmentation package transformed the pace of the early rebuild.
+- Hacking skill now rises far faster than in Runs 1 and 2.
+- deploy.js V2 makes the post-installation recovery process significantly easier.
+- Faction memberships must be regained after installation, even though favor and achievements persist.
+- The project is moving from basic survival automation toward repeatable run-reset automation.
 
 ---
 
@@ -522,29 +565,40 @@ Pending.
 ## Session 3 Discoveries
 
 - Automation can be restored rapidly after an augmentation installation because script files remain on `home`.
-- The first augmentation set produced noticeable improvements to hacking speed, hacking level gain, and experience gain.
 - Program creation can be paused and resumed without losing progress.
 
 ## Session 4 Discoveries
 
 - Purchased augmentations do not need to be installed immediately.
-- NiteSec offers nine remaining augmentations at the time of joining.
-- Sector-12 and CyberSec remain available while working with NiteSec.
 - Distributed automation can continue running while the player performs faction work.
+
+## Session 5 Discoveries
+
+- Faction donations become available after building sufficient favor.
+- A final NeuroFlux Governor purchase can use money and reputation that would otherwise be lost on reset.
+- The value of an augmentation cycle depends more on the combined multiplier package than the raw number of purchases.
+
+## Session 6 Discoveries
+
+- Faction memberships reset after augmentation installation, while faction favor persists.
+- Program files must be reacquired or recreated after installation.
+- deploy.js V2 reduces the amount of manual work required after a reset.
+- A strong hacking augmentation batch can compress many hours of early progression into a few hours.
 
 ---
 
 # Questions To Investigate
 
 - Optimal timing for the first purchased server.
-- Best Hacknet investment strategy from this point.
-- Efficient NiteSec reputation farming.
+- Whether Hacknet investment remains worthwhile outside achievement goals.
+- Best order for rejoining CyberSec, NiteSec, and The Black Hand.
 - Best transition away from early-game targets.
 - Batch hacking design.
-- Best augmentation purchase order for the second cycle.
-- How many augmentations should be accumulated before the next installation?
-- Which NiteSec augmentations provide the best immediate value?
-- When should work return to Sector-12 or CyberSec?
+- Best augmentation purchase order for the third cycle.
+- When to begin purchased-server infrastructure.
+- Whether deploy.js V2 should automatically choose a stronger target than `n00dles`.
+- When to begin using faction RAM sharing.
+- Which remaining Sector-12 augmentations are worth buying during Run 3.
 
 ---
 
@@ -564,4 +618,4 @@ https://www.youtube.com/watch?v=HgYovv-IKH4&list=PLq4hiTpnKWr6pBxq2gOoIORvbmDDMY
 
 ---
 
-_Last Updated: Session 4 (2026-07-13)_
+_Last Updated: Session 6 — Start of Run 3 (2026-07-21)_
