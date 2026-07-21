@@ -2,7 +2,10 @@
 export async function main(ns) {
     const target = ns.args[0] ?? "n00dles";
 
+    // Weaken if security rises more than 5 above the server minimum.
     const securityBuffer = 5;
+
+    // Grow whenever money falls below 25% of the server maximum.
     const moneyThreshold = 0.25;
 
     while (true) {
