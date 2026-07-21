@@ -142,6 +142,30 @@ TBD
 
 ---
 
+# Current Research Focus
+
+## Automation Strategy
+
+**Status:** Active
+
+**Summary:**
+
+Our current strategy favours reliable, unattended automation over short-term optimisation.
+
+**Key Decisions**
+
+- Use a central `deploy.js` script to automatically deploy workers to every rooted server.
+- Use a generic `worker.js` that continuously decides whether to weaken, grow, or hack based on the server's current state.
+- Allow deployment to any target by passing the desired server to `deploy.js`, avoiding hard-coded targets.
+- Optimise for continuous progression while offline or AFK rather than maximum income per second.
+- Delay advanced HWGW batch hacking until later in the playthrough when RAM, hacking speed, and available tools make batching worthwhile.
+
+**Outcome**
+
+This approach provides stable income, consistent hacking experience, and a strong platform for progressing through factions, augmentations, and eventually the remaining achievements.
+
+---
+
 # Research Log
 
 ## 2026-07-10
@@ -154,3 +178,10 @@ TBD
 - Added the official NS API Reference as the primary scripting reference.
 - Added the official Getting Started Guide as the canonical early-game progression reference.
 - Clarified the distinct roles of the documentation, API reference, guide, and source code.
+
+## 2026-07-21
+
+- Documented the current automation architecture built around `deploy.js` and `worker.js`.
+- Confirmed the transition from individual hack scripts to a self-balancing worker model.
+- Recorded the decision to prioritise reliability and unattended progression before advanced batch hacking.
+- Identified achievement-focused research as the next major area of investigation following faction progression and BruteSSH acquisition.
