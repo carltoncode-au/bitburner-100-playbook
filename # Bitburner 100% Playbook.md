@@ -34,18 +34,18 @@
 | Current BitNode | BitNode-1 |
 | Current Run | Run 3 |
 | Current City | Sector-12 |
-| Money | $47.470m |
+| Money | $259.633m |
 | Home RAM | 8.00 GB free |
 | Home Cores | *(To be recorded)* |
-| Hacking Level | 199 |
+| Hacking Level | 243 |
 | Karma | 0.000 |
 | Hacknet Nodes | 0 |
 | Cloud Servers | 0 / 25 |
-| Current Factions | Sector-12 |
+| Current Factions | NiteSec, Sector-12, CyberSec |
 | Augmentations Installed | 10 |
-| Time Since Last Augmentation | 2h 58m 51s |
-| Total Play Time | 9d 7h 35m 05s |
-| Current Focus | Rebuilding Run 3 with faster hacking growth and deploy.js V2 |
+| Time Since Last Augmentation | 17h 57m 48s |
+| Total Play Time | 9d 22h 34m 01s |
+| Current Focus | Expanding Run 3 automation with deploy.js V3 and rebuilding faction progress |
 
 ---
 
@@ -56,11 +56,12 @@
 - [x] Install the second augmentation batch.
 - [x] Begin Run 3.
 - [x] Create deploy.js V2.
+- [x] Upgrade deployment automation to deploy.js V3.
 - [x] Restore distributed hacking automation.
-- [ ] Rejoin CyberSec.
-- [ ] Rejoin NiteSec.
+- [x] Rejoin CyberSec.
+- [x] Rejoin NiteSec.
 - [ ] Continue rebuilding hacking levels and income.
-- [ ] Finish recreating ServerProfiler.exe.
+- [x] Finish recreating ServerProfiler.exe.
 
 ## Short Term
 
@@ -68,7 +69,8 @@
 - [ ] Reacquire HTTPWorm.exe.
 - [ ] Reacquire SQLInject.exe.
 - [ ] Rejoin The Black Hand when eligible.
-- [ ] Expand automation beyond the current 12 active hosts.
+- [x] Expand automation beyond the initial 12 active hosts.
+- [ ] Continue expanding beyond the current 17 active hosts.
 - [ ] Upgrade Home RAM.
 - [ ] Begin the next faction-reputation cycle.
 
@@ -174,7 +176,7 @@ Run 3 is focused on rebuilding after the second augmentation installation while 
 
 ### Current Strategy
 
-Run 3 is a rapid rebuild cycle. The second augmentation batch increased hacking money, hacking level, hacking experience, and hacking speed enough that hacking skill is climbing far faster than in earlier runs. The immediate goal is to use `deploy.js V2` to restore the network quickly, rejoin the hacking factions, and return to the strongest available progression path without spending long on low-value early-game work.
+Run 3 is a rapid rebuild cycle. The second augmentation batch increased hacking money, hacking level, hacking experience, and hacking speed enough that hacking skill is climbing far faster than in earlier runs. The immediate goal is to use `deploy.js V3` to restore the network quickly, rejoin the hacking factions, and return to the strongest available progression path without spending long on low-value early-game work.
 
 ### Current Priorities
 
@@ -206,20 +208,20 @@ _TBD_
 | Script | Purpose | Status |
 |---------|---------|--------|
 | worker.js | Distributed hack / grow / weaken automation | ✅ Active |
-| deploy.js V2 | Scans, roots, deploys, and starts workers more efficiently | ✅ Active |
+| deploy.js V3 | Scans, roots, deploys, selects targets, and starts workers more efficiently | ✅ Active |
 | scan.js | Network discovery | ✅ Available |
 | n00dles.js | Early-game hacking helper | ✅ Available |
 | hack.js | Dedicated hacking action | ✅ Available |
 | grow.js | Dedicated growth action | ✅ Available |
 | weaken.js | Dedicated security reduction action | ✅ Available |
 
-## deploy.js V2
+## deploy.js V3
 
-The revised deployment script replaces the earlier manual deployment workflow. Its purpose is to make post-augmentation recovery faster by discovering eligible servers, gaining root access where possible, copying the worker script, and using available RAM automatically.
+The third deployment version improves the post-augmentation recovery workflow by discovering eligible servers, gaining root access where possible, copying the worker script, using available RAM automatically, and selecting a suitable target when one is not provided.
 
 ## Current Deployment
 
-Automation is currently active on 12 hosts:
+Automation is currently active on 17 hosts:
 
 - n00dles
 - foodnstuff
@@ -233,6 +235,16 @@ Automation is currently active on 12 hosts:
 - nectar-net
 - zer0
 - neo-net
+- phantasy
+- omega-net
+- silver-helix
+- the-hub
+- avmnite-02h
+
+### Current Production
+
+- Total production since the latest augmentation installation: $101.627m
+- Current production rate: approximately $1.571k per second
 
 ---
 
@@ -248,13 +260,9 @@ Programs reset after augmentation installation and must be recreated or reacquir
 | BruteSSH.exe | ✅ Acquired | Opens SSH ports |
 | FTPcrack.exe | ✅ Acquired | Opens FTP ports |
 | DeepscanV1.exe | ✅ Acquired | Extends scan-analyze depth to 5 |
+| ServerProfiler.exe | ✅ Acquired | Displays hacking and Netscript information about servers |
 | AutoLink.exe | ✅ Acquired | Enables direct connection through scan-analyze |
 
-## In Progress
-
-| Program | Progress | Notes |
-|---------|----------|-------|
-| ServerProfiler.exe | 25.32% | Being recreated during Run 3 |
 
 ## Not Yet Reacquired This Run
 
@@ -295,6 +303,11 @@ None.
 - nectar-net
 - zer0
 - neo-net
+- phantasy
+- omega-net
+- silver-helix
+- the-hub
+- avmnite-02h
 
 ## Home Upgrades
 
@@ -310,20 +323,22 @@ None.
 
 ## Current Membership
 
+- NiteSec
 - Sector-12
+- CyberSec
 
 ## Current Faction Progress
 
 | Faction | Reputation | Favor | Augmentations Remaining | Notes |
 |---------|------------|-------|-------------------------|-------|
-| Sector-12 | 308.688 | 54.322 | 5 | Current membership after the Run 3 reset |
+| NiteSec | 45.926 | 193.759 | 4 | Rejoined during Run 3 |
+| Sector-12 | 87.369k | 54.322 | 5 | Current city faction progress |
+| CyberSec | 38.273 | 53.465 | 0 | Rejoined; no augmentations remaining |
 
 ## Rumours and Rejoin Targets
 
 | Faction | Status | Notes |
 |---------|--------|-------|
-| CyberSec | Rumour available | Rejoin by demonstrating hacking skill on CSEC |
-| NiteSec | Rumour available | Rejoin after meeting its hacking-server requirements |
 | The Black Hand | Rumour available | `I.I.I.I` clue displayed |
 
 ## Faction History
@@ -331,8 +346,8 @@ None.
 | Faction | Status | Notes |
 |---------|--------|-------|
 | Sector-12 | Rejoined / Current | First city faction |
-| CyberSec | Previously joined | Must be rejoined after augmentation installation |
-| NiteSec | Previously joined | Must be rejoined after augmentation installation |
+| CyberSec | Rejoined / Current | No augmentations remaining |
+| NiteSec | Rejoined / Current | Four augmentations remaining |
 
 ---
 
@@ -414,6 +429,7 @@ Verified during this playthrough:
 | 2026-07-20 | Continue the second augmentation cycle until a substantial batch was ready. | Maximized the value of the next reset. |
 | 2026-07-21 | Install the second augmentation batch and begin Run 3. | The combined hacking bonuses were large enough to justify resetting. |
 | 2026-07-21 | Replace the original deployment workflow with deploy.js V2. | Speeds up recovery and reduces repetitive manual deployment work. |
+| 2026-07-22 | Upgrade deployment automation to deploy.js V3. | Adds automatic target selection and improves hands-off recovery after resets. |
 
 ---
 
@@ -443,10 +459,11 @@ Verified during this playthrough:
 - Installed seven additional augmentations, bringing the total to 10.
 - Began with substantially improved hacking multipliers.
 - Created deploy.js V2.
-- Restored distributed automation across 12 hosts.
-- Reached Hacking Level 199 within the first three hours.
-- Rejoined Sector-12.
-- Began rebuilding programs and preparing to rejoin CyberSec and NiteSec.
+- Upgraded deployment automation to deploy.js V3.
+- Restored distributed automation across 17 hosts.
+- Reached Hacking Level 243 during the first day of Run 3.
+- Rejoined Sector-12, CyberSec, and NiteSec.
+- Recreated ServerProfiler.exe and continued rebuilding the program set.
 
 ---
 
@@ -567,9 +584,10 @@ The first augmentation reset paid off quickly. Run 2 surpassed Run 1 in both hac
 
 - Began Run 3 with 10 installed augmentations.
 - Created deploy.js V2.
-- Restored distributed automation across 12 hosts.
+- Upgraded deployment automation to deploy.js V3.
+- Restored distributed automation across 17 hosts.
 - Reached Hacking Level 199 in under three hours.
-- Rejoined Sector-12.
+- Rejoined Sector-12, CyberSec, and NiteSec.
 - Reacquired BruteSSH.exe, FTPcrack.exe, DeepscanV1.exe, and AutoLink.exe.
 - Began recreating ServerProfiler.exe.
 - Confirmed rumours for CyberSec, NiteSec, and The Black Hand.
@@ -596,6 +614,45 @@ The first augmentation reset paid off quickly. Run 2 surpassed Run 1 in both hac
 - deploy.js V2 makes the post-installation recovery process significantly easier.
 - Faction memberships must be regained after installation, even though favor and achievements persist.
 - The project is moving from basic survival automation toward repeatable run-reset automation.
+
+---
+
+## Session 7 – Run 3 Expansion and deploy.js V3
+
+### Major Milestones
+
+- Upgraded deployment automation from deploy.js V2 to deploy.js V3.
+- Expanded distributed automation from 12 to 17 active hosts.
+- Rejoined CyberSec and NiteSec alongside Sector-12.
+- Recreated ServerProfiler.exe.
+- Reached Hacking Level 243.
+- Increased available money to $259.633m.
+- Generated $101.627m from scripts since the latest augmentation installation.
+- Continued rebuilding quickly under the stronger Run 3 augmentation multipliers.
+
+### Current State
+
+- Money: $259.633m
+- Hacking Level: 243
+- Hacknet Nodes: 0
+- Augmentations Installed: 10
+- Active rooted hosts: 17
+- Current factions: NiteSec, Sector-12, CyberSec
+- NiteSec reputation: 45.926
+- NiteSec favor: 193.759
+- Sector-12 reputation: 87.369k
+- Sector-12 favor: 54.322
+- CyberSec reputation: 38.273
+- CyberSec favor: 53.465
+- Time since last augmentation: 17h 57m 48s
+- Total play time: 9d 22h 34m 01s
+
+### Lessons Learned
+
+- deploy.js V3 further reduces manual work by selecting a target automatically when none is supplied.
+- Run 3 faction recovery is much faster because high retained favor accelerates reputation gain.
+- The current augmentation package continues to compress early-run rebuilding time.
+- CyberSec has no remaining augmentations, so future faction effort should prioritise NiteSec, Sector-12, and the next hacking faction.
 
 ---
 
@@ -636,6 +693,13 @@ Pending.
 - deploy.js V2 reduces the amount of manual work required after a reset.
 - A strong hacking augmentation batch can compress many hours of early progression into a few hours.
 
+## Session 7 Discoveries
+
+- deploy.js V3 can choose a target automatically when one is not supplied.
+- High retained faction favor makes rejoining factions and rebuilding reputation substantially faster.
+- CyberSec has been fully cleared of available augmentations.
+- Run 3 automation scaled from 12 to 17 active hosts without requiring purchased servers.
+
 ---
 
 # Questions To Investigate
@@ -647,7 +711,7 @@ Pending.
 - Batch hacking design.
 - Best augmentation purchase order for the third cycle.
 - When to begin purchased-server infrastructure.
-- Whether deploy.js V2 should automatically choose a stronger target than `n00dles`.
+- Continue tuning deploy.js V3 target selection as stronger servers become viable.
 - When to begin using faction RAM sharing.
 - Which remaining Sector-12 augmentations are worth buying during Run 3.
 
@@ -669,4 +733,4 @@ https://www.youtube.com/watch?v=HgYovv-IKH4&list=PLq4hiTpnKWr6pBxq2gOoIORvbmDDMY
 
 ---
 
-_Last Updated: Session 6 — Start of Run 3 (2026-07-21)_
+_Last Updated: Session 7 — Run 3 Expansion (2026-07-22)_
